@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ikaw at kape</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wave">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Types</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <h1>ikaw at kape.com</h1>
+            <h2> Kape para sa lahat</h2>
+            <p>Kapeng para sa mga sinaktan, iniwan, pinaasa, umasa sa mixed signals,at hanggang kaibigan lang.</p>
+        </div>
+
+        <!-- 100% Organic, Healthy Beans, Not Expensive Section (Below Main Text) -->
+        <div class="info-box">
+            <div class="info-item">
+                <div class="image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdl_50hpL-fxkeRXbAIniCChu6gP5HnYJpaZO3KwAdMCstxUO7bzIAVY0&s=10" alt="">
+                </div>
+                <h3>100% Organic</h3>
+                <p>Hindi katulad ng iba dyan.</p>
+            </div>
+            <div class="info-item">
+                <div class="image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6T1F9WH2xf0pHpRg7lB_tph3nqSKYaIxJXB5DV5iM7inZOBKJuvsH62m&s=10" alt="">
+                </div>
+                <h3>Healthy Beans</h3>
+                <p>Great for your body and mind!</p>
+            </div>
+            <div class="info-item">
+                <div class="image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Pwb2XRqnWMtrot7XjqOZEAkgJC5r78OehLhBx4hAtldoZd_kVg5tpCSh&s=10" alt="">
+                </div>
+                <h3>Not Expensive</h3>
+                <p>Affordable, just like your favorite coffee!</p>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <div class="products-section">
+            <h2>Our Products</h2>
+            <div class="products-container">
+                <div class="product-card" onclick="showModal()">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAWehACvqro8giibRPK1P8LovB0XhqMVWfAw&usqp=CAU" alt="">
+                    </div>
+                    <h2>KAPENG BARAKO GRANULES </h2>
+                    <h2>Php.350.00</h2>
+                    <h3>BUY NOW!!</h3>
+                </div>
+                <div class="product-card" onclick="showModal()">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_4hpQbyRwB2OqjvHYKjGyPA1DuAITbcjnxg&usqp=CAU" alt="">
+                    </div>
+                    <h2>LOAF BREAD </h2>
+                    <h2>Php.100.00</h2>
+                    <h3>BUY NOW!!</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Email Form -->
+        <div class="modal" id="emailModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Enter Your Email</h3>
+                <input type="email" placeholder="Your email here" id="emailInput">
+                <button>Submit</button>
+            </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="social-links">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="far fa-envelope"></i>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        function showModal() {
+            document.getElementById("emailModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("emailModal").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

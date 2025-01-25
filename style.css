@@ -1,0 +1,246 @@
+/* Universal Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Container Styles */
+.container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #93C572 70%, #C8EBB1 30%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Navigation Bar Styles */
+nav {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul a {
+    text-decoration: none;
+    padding: 0.3rem 1.3rem;
+    font-size: 17px;
+    font-weight: bold;
+    color: #494234;
+    position: relative;
+    z-index: 1;
+}
+nav ul a::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    background-color: #C8EBB1;
+    z-index: -1;
+    transition: 0.5s;
+}
+nav ul a:hover:after {
+    width: 100%;
+}
+
+/* Main Content (Text) */
+.main-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+.main-content h1 {
+    font-size: 60px;
+    color: #494234;
+    letter-spacing: 1px;
+}
+.main-content h2 {
+    font-size: 40px;
+    color: #314D3A;
+    margin-top: 15px;
+}
+.main-content p {
+    font-size: 22px;
+    color: #494234;
+    margin-top: 10px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Info Box (100% Organic, Healthy Beans, Not Expensive) */
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 30px;
+}
+.info-item {
+    text-align: center;
+}
+.info-item .image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: -5px 5px 17px rgba(0,0,0,0.3);
+}
+.info-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.info-item h3 {
+    font-size: 24px;
+    color: #314D3A;
+}
+.info-item p {
+    font-size: 16px;
+    color: #494234;
+}
+
+/* Products Section */
+.products-section {
+    text-align: center;
+    margin-top: 50px;
+}
+.products-section h2 {
+    font-size: 40px;
+    color: #314D3A;
+    margin-bottom: 30px;
+}
+.products-container {
+    display: flex;
+    flex-direction: column;  /* Arrange products vertically */
+    gap: 30px;
+    align-items: center;
+}
+.product-card {
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid #C8EBB1;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.product-card .product-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product-card .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-card h3 {
+    font-size: 24px;
+    color: #314D3A;
+    margin-bottom: 10px;
+}
+.product-card p {
+    font-size: 16px;
+    color: #494234;
+}
+
+/* Modal (Email Form) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+}
+.modal-content h3 {
+    font-size: 24px;
+    color: #314D3A;
+}
+.modal-content input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 16px;
+    border: 2px solid #C8EBB1;
+    border-radius: 10px;
+}
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #314D3A;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal-content button:hover {
+    background-color: #494234;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Social Media Icons */
+.social-links {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+.social-links i {
+    font-size: 30px;
+    background-color: #93C572;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.social-links i:hover {
+    background-color: #494234;
+    transform: translateY(-5px);
+}
